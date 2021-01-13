@@ -1,23 +1,35 @@
-# Compiled class file
-*.class
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 
-# Log file
-*.log
 
-# BlueJ files
-*.ctxt
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+/Log/
+/src/main/resources/Files/
+/Logs/
+/logs/
+/src/main/resources/application.properties
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/target/onboard-application.jar
+/target/onboard-application.jar.original
+/docker-compose.yml
+/Dockerfile
+/src/test/resources/application.properties
+/src/test/resources/Files/
+/src/testbeforePmd.zip
+/test.pdf
+/AssetFile.xlsx
+/src/main/resources/
+
+
+
+
+
