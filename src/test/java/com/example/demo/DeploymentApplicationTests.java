@@ -10,8 +10,6 @@ public class DeploymentApplicationTests {
 
 	@Test
 	public void main() {
-		DeploymentApplication.main(new String[]{});
-		assertNull(null);
 
 	}
 
