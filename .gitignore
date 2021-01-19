@@ -13,17 +13,13 @@ target/
 
 /Log/
 /src/main/resources/Files/
-/Logs/
-/logs/
-/src/main/resources/application.properties
 
 
-/target/onboard-application.jar
-/target/onboard-application.jar.original
+
+/target/**
 /docker-compose.yml
 /Dockerfile
-/src/test/resources/application.properties
-/src/test/resources/Files/
+
 /src/testbeforePmd.zip
 /test.pdf
 /AssetFile.xlsx
