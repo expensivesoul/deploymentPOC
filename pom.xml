@@ -19,6 +19,15 @@
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+
+			<sonar.coverage.exclusions>
+				**/src/main/java/com/example/demo/utils/*,
+				**/src/main/java/com/example/demo/DeploymentApplication.java,
+				./demo/utils/propertiesListener.java,
+				./demo/DeploymentApplication.java
+
+			</sonar.coverage.exclusions>
+
 	</properties>
 
 	<dependencies>
@@ -85,11 +94,7 @@
 			<version>3.7.0.1746</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.sonarsource.scanner.maven</groupId>
-			<artifactId>sonar-maven-plugin</artifactId>
-			<version>3.7.0.1746</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.mockito</groupId>

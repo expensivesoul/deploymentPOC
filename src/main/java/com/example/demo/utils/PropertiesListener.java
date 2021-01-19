@@ -20,7 +20,7 @@ public class PropertiesListener implements ApplicationListener<ApplicationPrepar
     private static final String AWS_SECRET_NAME = "DeploymentPOC";
     private static final String AWS_REGION = "ap-south-1";
     private static final String SPRING_DATASOURCE_USERNAME = "spring.datasource.username";
-    private static final String SPRING_DATASOURCE_PASSWORD = "spring.datasource.password";
+    private static final String SPRING_DATASOURCE_PASSCODE = "spring.datasource.password";
     @Override
     public void onApplicationEvent(ApplicationPreparedEvent event) {
         /***
@@ -28,11 +28,11 @@ public class PropertiesListener implements ApplicationListener<ApplicationPrepar
          */
         String secretJson = getSecret();
         String username = getString(secretJson, SPRING_DATASOURCE_USERNAME);
-        String password = getString(secretJson, SPRING_DATASOURCE_PASSWORD);
+        String password = getString(secretJson, SPRING_DATASOURCE_PASSCODE);
         ConfigurableEnvironment environment = event.getApplicationContext().getEnvironment();
         Properties props = new Properties();
         props.put(SPRING_DATASOURCE_USERNAME, username);
-        props.put(SPRING_DATASOURCE_PASSWORD, password);
+        props.put(SPRING_DATASOURCE_PASSCODE, password);
         environment.getPropertySources().addFirst(new PropertiesPropertySource("aws.secret.manager", props));
     }
     private String getSecret() {
